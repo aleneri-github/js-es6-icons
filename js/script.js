@@ -21,7 +21,7 @@ function print(array, container) {
       container.append(`
         <div>
           <i class= "${family} ${prefix}${name}"></i>
-          <div class="title">${name.toUpperCase()}</div>
+          <div class=".title">${name.toUpperCase()}</div>
         </div>
         `);
 });
