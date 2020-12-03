@@ -6,24 +6,28 @@
 
 header {
   height: 80px;
-  background-color: coral;
-}
-
-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  background-color: green;
 }
 
 .icons_box {
+  height: calc(100vh - 80px);
   display: flex;
-  height: 150px;
-  width: calc(100% / 6);
-  background-color: lightgrey;
-  border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: lightgreen;
 }
 
 .fas {
-  font-size: 70px;
+  display: flex;
+  height: 150px;
+  width: 150px;
+  box-shadow: 1px 1px black;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  background-color: pink;
+  border-radius: 100%;
 }

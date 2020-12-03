@@ -18,12 +18,10 @@ function print(array, container) {
 
       const {name, prefix, family} = element;
 
-      container = $('.icons_box')
 
       container.append(`
         <div>
           <i class= "${family} ${prefix}${name}"></i>
-          <div class=".title">${name.toUpperCase()}</div>
         </div>
         `);
 });
@@ -105,7 +103,7 @@ const icons = [
         family: "fas"
       },
       {
-        name: "wheelchair",
+        name: "bus-alt",
         prefix: "fa-",
         type: "vehicle",
         family: "fas"
@@ -126,6 +124,36 @@ const icons = [
         name: "helicopter",
         prefix: "fa-",
         type: "vehicle",
+        family: "fas"
+      },
+      {
+        name: "candy-cane",
+        prefix: "fa-",
+        type: "food",
+        family: "fas"
+      },
+      {
+        name: "pizza-slice",
+        prefix: "fa-",
+        type: "food",
+        family: "fas"
+      },
+      {
+        name: "hamburger",
+        prefix: "fa-",
+        type: "food",
+        family: "fas"
+      },
+      {
+        name: "egg",
+        prefix: "fa-",
+        type: "food",
+        family: "fas"
+      },
+      {
+        name: "cheese",
+        prefix: "fa-",
+        type: "food",
         family: "fas"
       },
     ];
