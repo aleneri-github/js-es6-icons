@@ -20,7 +20,7 @@ function print(array, container) {
 
       container.append(`
         <div>
-          <i class= "${family}${prefix}${name}"></i>
+          <i class= "${family} ${prefix}${name}"></i>
           <div class="title">${name.toUpperCase()}</div>
         </div>
         `);
@@ -130,7 +130,7 @@ const icons = [
 
 const container = $('.icons_box')
 
-print(icons, container);   
+print(icons, container);
 
     console.log(icons);
 
