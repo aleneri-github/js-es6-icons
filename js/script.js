@@ -9,6 +9,30 @@ $(document).ready(
 // literal, visualizzare in pagina tutte le icone con il
 // proprio nome.
 
+// -------------------------------------FUNZIONI---------------
+
+function print(array, container) {
+
+  array.forEach(
+    (element, index) => {
+
+      const {name, prefix, family} = element;
+
+      container.append(`
+        <div>
+          <i class= "${family}${prefix}${name}"
+
+
+
+        `
+
+      )
+
+});
+}
+
+
+
 const icons = [
       {
         name: "dog",
@@ -108,11 +132,10 @@ const icons = [
       },
     ];
 
+    console.log(icons);
 
-    icons.forEach((element, index, array) => {
-      console.log(element, index);
 
-    });
+
 
 
 
