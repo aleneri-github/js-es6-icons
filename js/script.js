@@ -27,6 +27,17 @@ function print(array, container) {
 });
 }
 
+function getTypes(array) {
+const types = [];
+  array.forEach(
+    (element) => {
+      if(types.includes(element.type) == false) {
+        types.push(element.type);
+      }
+    }
+  );
+  return types;
+}
 // --------------------------------------------------------
 
 const icons = [
@@ -162,7 +173,20 @@ const container = $('.icons_box')
 
 print(icons, container);
 
+const types = getTypes(icons);
+console.log(types);
+
     console.log(icons);
+
+//     milestone 2:
+// definire un array di colori e associare ad ogni
+// tipo di icona un colore.
+// Visualizzare le icone di colore diverso in base al
+// tipo.
+
+
+const arrayColor = ["blue", "red", "yellow", "orange"];
+console.log(arrayColor);
 
 
 
