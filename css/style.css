@@ -17,8 +17,13 @@ main {
 }
 
 .icons_box {
+  display: flex;
   height: 150px;
   width: calc(100% / 6);
   background-color: lightgrey;
   border-radius: 5px;
+}
+
+.fas {
+  font-size: 70px;
 }

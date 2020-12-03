@@ -18,6 +18,8 @@ function print(array, container) {
 
       const {name, prefix, family} = element;
 
+      container = $('.icons_box')
+
       container.append(`
         <div>
           <i class= "${family} ${prefix}${name}"></i>
