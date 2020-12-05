@@ -169,16 +169,6 @@ const icons = [
       },
     ];
 
-    for (var key in icons) {
-  console.log(icons[key].type);
-  if (icons[key].type == "food") {
-    console.log(icons[key].type == "food");
-    // addClass('.red');
-
-  }
-  }
-
-
 
 const container = $('.icons_box')
 
@@ -198,20 +188,6 @@ console.log(types);
 
 const arrayColor = ["blue", "red", "yellow", "orange"];
 console.log(arrayColor);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   }
 );

@@ -9,8 +9,7 @@ header {
   background-color: green;
 }
 
-.icons_box {
-  height: calc(100vh - 80px);
+.icons_box {  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
