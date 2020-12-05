@@ -169,6 +169,17 @@ const icons = [
       },
     ];
 
+for (var i = 0; i < icons.length; i++) {
+  singleIcon = icons[i];
+  console.log(singleIcon);
+  singleType = singleIcon.type;
+  console.log(singleType);
+  if (singleType == "food") {
+  
+  }
+
+}
+
 
 const container = $('.icons_box')
 
