@@ -1,14 +1,6 @@
 $(document).ready(
   function() {
 
-//     milestone 1:
-// definire un array di oggetti; ogni oggetto
-// rappresenta un'icona, che è caratterizzata da:
-// nome, prefisso, tipo e famiglia.
-// Utilizzando la funzione forEach e il template
-// literal, visualizzare in pagina tutte le icone con il
-// proprio nome.
-
 // -------------------------------------FUNZIONI---------------
 
 function print(array, container) {
@@ -240,15 +232,5 @@ select.change(
     }
   }
 );
-
-
-//     milestone 2:
-// definire un array di colori e associare ad ogni
-// tipo di icona un colore.
-// Visualizzare le icone di colore diverso in base al
-// tipo.
-
-
-
   }
 );
