@@ -41,7 +41,6 @@ const types = [];
   return types;
 }
 
-
 function addColorIcon(iconsArray, colorsArray, typesArray) {
 
   console.log(colorsArray);
@@ -64,6 +63,17 @@ function addColorIcon(iconsArray, colorsArray, typesArray) {
     }
   );
 return newArray;
+}
+
+function printOptions(select, types) {
+
+  types.forEach(
+    (element) => {
+      select.append(`
+        <option value ="${element}">${element}</option>`);
+    }
+  )
+
 }
 // --------------------------------------------------------
 
@@ -211,6 +221,25 @@ const colorIcons = addColorIcon(icons, arrayColor, types );
 console.log(colorIcons);
 
 print(colorIcons, container);
+
+const select = $("#type");
+printOptions(select, types);
+
+select.change(
+  function() {
+    const selectType = $(this).val();
+    if (selectType == "") {
+      print(colorIcons, container);
+    } else {
+      const filteredIcons = colorIcons.filter(
+        (element) => {
+          return element.type == selectType;
+        }
+      );
+      print(filteredIcons, container)
+    }
+  }
+);
 
 
 //     milestone 2:
