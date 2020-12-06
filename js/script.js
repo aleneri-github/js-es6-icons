@@ -13,15 +13,17 @@ $(document).ready(
 
 function print(array, container) {
 
+  container.html('');
+
   array.forEach(
     (element, index) => {
 
-      const {name, prefix, family} = element;
+      const {name, prefix, family, color} = element;
 
 
       container.append(`
         <div>
-          <i class= "${family} ${prefix}${name}"></i>
+          <i class= "${family} ${prefix}${name}" style="color:${color}"></i>
         </div>
         `);
 });
@@ -37,6 +39,31 @@ const types = [];
     }
   );
   return types;
+}
+
+
+function addColorIcon(iconsArray, colorsArray, typesArray) {
+
+  console.log(colorsArray);
+  console.log(typesArray);
+
+  const newArray = iconsArray.map(
+    (element) => {
+      const typeIndex = typesArray.indexOf(element.type);
+      console.log(element.type, typeIndex);
+
+      const color = colorsArray[typeIndex];
+
+
+      const newElement = {
+        ...element,
+
+        color: color
+      };
+      return newElement;
+    }
+  );
+return newArray;
 }
 // --------------------------------------------------------
 
@@ -169,26 +196,22 @@ const icons = [
       },
     ];
 
-for (var i = 0; i < icons.length; i++) {
-  singleIcon = icons[i];
-  console.log(singleIcon);
-  singleType = singleIcon.type;
-  console.log(singleType);
-  if (singleType == "food") {
-  
-  }
 
-}
+    const arrayColor = ["dodgerblue", "red", "lime", "orange"];
+
 
 
 const container = $('.icons_box')
 
-print(icons, container);
 
 const types = getTypes(icons);
-console.log(types);
 
-    console.log(icons);
+
+const colorIcons = addColorIcon(icons, arrayColor, types );
+console.log(colorIcons);
+
+print(colorIcons, container);
+
 
 //     milestone 2:
 // definire un array di colori e associare ad ogni
@@ -197,8 +220,6 @@ console.log(types);
 // tipo.
 
 
-const arrayColor = ["blue", "red", "yellow", "orange"];
-console.log(arrayColor);
 
   }
 );
